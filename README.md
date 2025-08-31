@@ -37,7 +37,7 @@ Google Generative AI API Key (Gemini)
 
 Clone the repository
 
-git clone https://github.com/your-username/DocSummary-AI.git
+git clone https://github.com/PriyanshiVerma-13/DocSummary-AI.git
 cd DocSummary-AI
 
 
