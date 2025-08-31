@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import axiosbase from "../../axiosbase"
 export default function UploadFile({file,setFile, setSummary, setInsights}) {
   const [isLoading, setIsLoading] = useState(false);
   const handleFileChange = (e) => {
@@ -14,11 +14,14 @@ export default function UploadFile({file,setFile, setSummary, setInsights}) {
     formData.append("length", "short"); // or medium / long
 
     try {
+
       const res = await fetch("http://localhost:5000/api/upload", {
         method: "POST",
         body: formData,
       });
-
+      const result = await axiosbase.post('/upload',formData,{
+        headers: {'Content-Type':'multipart/form-data'}
+      })
       const data = await res.json();
       console.log({data})
       setSummary(data.text);
