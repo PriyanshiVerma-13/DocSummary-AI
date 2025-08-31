@@ -22,7 +22,7 @@ app.use(cors({
 app.use(express.json());
 
 // File uploads will be handled in routes/upload.js
-app.use("/api/upload", uploadRoutes);
+app.use("/api", uploadRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

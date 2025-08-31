@@ -65,8 +65,9 @@ Text:
 }
 
 // Main route: upload + extract + summarize/insights
-router.post("/", upload.single("file"), async (req, res) => {
+router.post("/upload", upload.single("file"), async (req, res) => {
   try {
+    console.log("backend hit");
     if (!req.file) return res.status(400).json({ error: "No file uploaded" });
 
     const filePath = path.resolve(req.file.path);
@@ -80,7 +81,7 @@ router.post("/", upload.single("file"), async (req, res) => {
       insights: summaryAndInsights, // array of points
     });
   } catch (err) {
-    console.error("❌ Error processing file:", err);
+    console.error(" Error processing file:", err);
     res.status(500).json({ error: "Failed to process file", details: err.message });
   }
 });
