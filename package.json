@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/server.js",
-    "postinstall" : "rm -rf ./node_modules/pdf-parse/test"
+    "start": "node backend/server.js"
   },
   "author": "",
   "license": "ISC",

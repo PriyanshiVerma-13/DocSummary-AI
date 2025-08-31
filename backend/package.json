@@ -17,6 +17,7 @@
     "dotenv": "^17.2.1",
     "express": "4.17",
     "multer": "^2.0.2",
+    "new-project": "file:..",
     "nodemon": "^3.1.10",
     "pdf-parse": "^1.1.1",
     "pdf-poppler": "^0.2.1",
