@@ -15,14 +15,12 @@ export default function UploadFile({file,setFile, setSummary, setInsights}) {
 
     try {
 
-      const res = await fetch("http://localhost:5000/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-      const result = await axiosbase.post('/upload',formData,{
+      
+      const {data} = await axiosbase.post('/upload',formData,{
         headers: {'Content-Type':'multipart/form-data'}
-      })
-      const data = await res.json();
+      });
+
+      
       console.log({data})
       setSummary(data.text);
       setInsights(data.insights);
