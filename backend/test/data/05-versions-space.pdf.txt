@@ -1,0 +1,58 @@
+
+
+Priyanshi Verma 
+ 1312priyanshi@gmail.com  9555 491 592  LinkedIn  GitHub 
+Career Objective 
+Dedicated and quick learner seeking opportunities to gain hands-on experience in the field of Computer Science, while building 
+a strong technical foundation. 
+Academic Qualificaiton 
+Pranveer Singh Institute of Technology 
+Bachelor of Technology in Computer Science - (CGPA 8.6) 
+Sughar Singh Academy 
+CBSE(Class XII) - (Aggregrate:89.4%) 
+Sughar Singh Academy 
+CBSE(Class X) - (Aggregrate:94.4%) 
+Experience 
+AI Intern 
+Edunet Foundation AICTE-Microsoft-SAP Internship 
+Sept 2022 – Jul 2026 
+ 
+2021 – 2022 
+ 
+2019 – 2020 
+ 
+ 
+ 
+Dec 2024 – Feb 2025 
+◦ Developed a Human Pose Estimation  project, utilizing machine learning to analyze human poses from images and 
+videos, achieving 80%+ accuracy in final models.
+ 
+◦ Implemented OpenPose and MediaPipe frameworks to extract keypoints and refine pose estimation models. 
+◦ Gained hands-on experience in computer vision, data preprocessing, and real-world AI applications, working with datasets 
+of 10,000+ images for training and validation. 
+Projects 
+DriveSure  Jun 2025 (Live) AI/ML, Blockchain, React 
+◦ Blockchain-Enabled Luxury Car Ownership and Insurance Framework. 
+◦ Developing a blockchain-based luxury car portal integrating decentralized ownership records, AI-driven risk assessment, 
+and automated smart contracts to enhance transaction transparency and security. 
+Chefie-Recipe-Bot  Mar 2025 Python, NLP, FastAPI, React 
+◦ Designed a recipe chatbot that increased user satisfaction by 35% through personalized meal suggestions using advanced 
+NLP techniques. 
+◦ Implemented a highly customizable rule-based response system, enhancing interaction quality and boosting user engage- 
+ment by 40%. 
+◦ Expanded the recipe chatbot’s functionality by adding 15 new dietary filters based on user feedback, expanding usability 
+for diverse user groups and improving retention by 30%. 
+Credit Card Fraud Detection  Sept 2024 Python, Machine Learning 
+◦ Built a Logistic Regression model to detect fraudulent transactions with 92% accuracy, analyzing over 10,000 transaction 
+records. 
+◦ Implemented feature engineering and performed data cleaning to improve prediction accuracy and model efficiency. 
+Technical Skills 
+Languages: Python, Javascript, C++, C 
+Libraries and Frameworks: Numpy, Scikit-Learn, Pandas, Seaborn, Matplotlib, OpenCV, TensorFlow, PyTorch 
+Tools and Technologies: Microsoft Excel, Data Visualization, Google Analytics, EDA,Git/Github, Machine Learning, Deep 
+Learning, MongoDB, MySQL, AWS, Google Cloud 
+Web and Software Development:React.js, Node.js, REST APIs, FastAPI 
+Subjects of Interest:Database Management System, Software Methodologies, Algorithm Analysis 
+Extracurricular 
+◦ Salesforce AI with Agentforce Champion Certification. 
+◦ Secured a global rank of 6208 in TCS CodeVita Season 12. 
