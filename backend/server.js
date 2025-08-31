@@ -1,15 +1,10 @@
 import express from "express";
-import path from "path";
-import {fileURLToPath} from "url";
-import multer from "multer";
 import cors from "cors";
 import dotenv from "dotenv";
 import uploadRoutes from "./routes/upload.js";
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(cors({
