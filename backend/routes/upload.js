@@ -3,7 +3,7 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 import Tesseract from "tesseract.js";
-import { convert } from "pdf-poppler";
+import pdf from "pdf-parse";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from 'dotenv'
 dotenv.config()
@@ -21,25 +21,15 @@ const upload = multer({ storage });
 const googleAI = new GoogleGenerativeAI( process.env.GEMINI_API_KEY );
 const model = googleAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// Helper: extract text from PDF or image
+// extract text from PDF or image
 async function extractText(filePath, ext) {
   let extractedText = "";
 
   if (ext === ".pdf") {
-    const outputDir = path.resolve("uploads");
-    const baseName = path.basename(filePath, ".pdf");
-
-    await convert(filePath, { format: "jpeg", out_dir: outputDir, out_prefix: baseName, page: null });
-
-    const imgFiles = fs.readdirSync(outputDir).filter((f) => f.startsWith(baseName) && f.endsWith(".jpg"));
-    if (imgFiles.length === 0) throw new Error("No images generated from PDF");
-
-    for (const img of imgFiles) {
-      const imgPath = path.join(outputDir, img);
-      const result = await Tesseract.recognize(imgPath, "eng");
-      extractedText += result.data.text + "\n";
-      fs.unlinkSync(imgPath); // cleanup image
-    }
+    
+    const dataBuffer = fs.readFileSync(filePath);
+    const data = await pdf(dataBuffer);
+    extractedText = data.text;
   } else if ([".png", ".jpg", ".jpeg"].includes(ext)) {
     const result = await Tesseract.recognize(filePath, "eng");
     extractedText = result.data.text;
@@ -51,7 +41,7 @@ async function extractText(filePath, ext) {
   return extractedText.trim();
 }
 
-// Helper: generate summary + insights as plain list
+// generate summary + insights as plain list
 async function generateSummaryAndInsights(text) {
   const prompt = `
 Summarize the following text into a plain list of points and generate key insights:
