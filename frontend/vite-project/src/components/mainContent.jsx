@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Upload, Lightbulb, FileText, Check } from "lucide-react";
-import UploadFile from './uploadFile';
+import UploadFile from './UploadFile';
 
 const MainContent = () => {
   const [summary, setSummary] = useState("");
@@ -22,12 +22,7 @@ const MainContent = () => {
     console.log("File:", file);
     console.log("Length:", selectedLength);
 
-    // 👉 Here you’ll later call your backend API
-    // Example:
-    // const formData = new FormData();
-    // formData.append("file", file);
-    // formData.append("length", selectedLength);
-    // fetch("/api/summarize", { method: "POST", body: formData });
+    
   };
 
   return (
@@ -127,7 +122,7 @@ const MainContent = () => {
     <h4 className="font-semibold text-gray-800">Extracted Text</h4>
   </div>
   <p className="text-gray-600 leading-relaxed">
-    {summary || "No summary generated yet"}
+    {summary || "No text extracted yet"}
   </p>
 </div>
 

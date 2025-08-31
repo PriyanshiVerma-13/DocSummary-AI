@@ -1,23 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import './App.css'
-import Header from './components/header'
-import HeroSection from './components/heroSection'
-import MainContent from './components/mainContent'
-import FeaturesSection from './components/featuresSection'
-import Footer from './components/footer'
+import Header from './components/Header'
+import HeroSection from './components/HeroSection'
+import MainContent from './components/MainContent'
+import FeaturesSection from './components/FeaturesSection'
+import Footer from './components/Footer'
+
 
 
 function App() {
-
+  
   return (
     <>
       <div className="font-sana">
         <Header />
         <HeroSection />
-        <MainContent />
+        <MainContent  />
         <FeaturesSection />
         <Footer />
-        
 
         </div>
     </>

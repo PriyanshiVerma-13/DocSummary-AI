@@ -1,4 +1,4 @@
-const Header = () => {
+function Header({onHistoryClick}) {
   return (
     <header className="flex justify-between items-center p-4 shadow-md bg-white">
       {/* Left side - Logo + App name */}
@@ -8,10 +8,10 @@ const Header = () => {
       </div>
 
       {/* Middle - Nav */}
-      <nav className="flex space-x-6">
-        <a href="#history" className="hover:text-green-600">History</a>
+      {/* <nav className="flex space-x-6">
+        <button onClick={onHistoryClick} className="hover:text-green-600">History</button>
         <a href="#settings" className="hover:text-green-600">Settings</a>
-      </nav>
+      </nav> */}
 
       {/* Right side - Icons */}
       <div className="flex items-center space-x-4">
